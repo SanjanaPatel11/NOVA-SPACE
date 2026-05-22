@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Space</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#0e1117;
+color:#e6e6e6;
+}
+
+/* NAV */
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 5%;
+background:#11151c;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#4cc9f0;
+}
+
+.topbar a{
+color:#aaa;
+text-decoration:none;
+margin-left:14px;
+font-size:.85rem;
+}
+
+/* HERO */
+.hero{
+padding:90px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:2.7rem;
+line-height:1.2;
+}
+
+.hero h1 span{
+color:#4cc9f0;
+}
+
+.hero p{
+margin-top:12px;
+color:#9aa0a6;
+max-width:520px;
+margin-inline:auto;
+}
+
+.cta{
+display:inline-block;
+margin-top:20px;
+padding:10px 22px;
+background:#4cc9f0;
+color:#000;
+text-decoration:none;
+border-radius:6px;
+}
+
+/* SECTION */
+section{
+padding:60px 5%;
+}
+
+/* PRICING */
+.cards{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.card{
+flex:1 1 220px;
+background:#161b22;
+padding:18px;
+border-radius:10px;
+}
+
+.price{
+font-size:1.8rem;
+margin:8px 0;
+}
+
+.card ul{
+list-style:none;
+font-size:.9rem;
+color:#aaa;
+}
+
+.card ul li{
+margin-bottom:6px;
+}
+
+.card button{
+margin-top:10px;
+padding:8px;
+width:100%;
+background:#222;
+color:#fff;
+border:none;
+cursor:pointer;
+}
+
+/* FAQ */
+.faqItem{
+margin-bottom:10px;
+border:1px solid #222;
+padding:10px;
+cursor:pointer;
+}
+
+.faqAns{
+display:none;
+font-size:.9rem;
+color:#aaa;
+margin-top:6px;
+}
+
+/* CONTACT */
+.form{
+margin-top:20px;
+max-width:420px;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin-bottom:8px;
+background:#161b22;
+border:1px solid #333;
+color:#fff;
+}
+
+button.submit{
+background:#4cc9f0;
+border:none;
+padding:10px;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+color:#777;
+font-size:.8rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<div class="logo">NO<span>VA</span></div>
+<div>
+<a href="#pricing">Plans</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<div class="hero">
+<h1>Turning ideas into <span>real products</span></h1>
+<p>This is a small setup I made to test how a simple startup layout could look without adding too much complexity.</p>
+<a href="#pricing" class="cta">Get started</a>
+</div>
+
+<section id="pricing">
+<h2>Plans</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Basic</h3>
+<div class="price">$0</div>
+<ul>
+<li>Simple tools</li>
+<li>Limited usage</li>
+<li>Single project</li>
+</ul>
+<button>Start</button>
+</div>
+
+<div class="card">
+<h3>Plus</h3>
+<div class="price">$15</div>
+<ul>
+<li>More access</li>
+<li>Email help</li>
+<li>Multiple projects</li>
+</ul>
+<button>Choose</button>
+</div>
+
+<div class="card">
+<h3>Advanced</h3>
+<div class="price">$40</div>
+<ul>
+<li>All features</li>
+<li>Priority help</li>
+<li>Custom setup</li>
+</ul>
+<button>Contact</button>
+</div>
+
+</div>
+</section>
+
+<section id="faq">
+<h2>FAQ</h2>
+
+<div class="faqItem" onclick="toggleFaq(this)">
+Can I change plan later?
+<div class="faqAns">Yeah, you can switch anytime.</div>
+</div>
+
+<div class="faqItem" onclick="toggleFaq(this)">
+Is there any free version?
+<div class="faqAns">Yes, basic plan is free.</div>
+</div>
+
+<div class="faqItem" onclick="toggleFaq(this)">
+Refund available?
+<div class="faqAns">Within 7 days, yes.</div>
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<div class="form">
+<input placeholder="Name">
+<input placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button class="submit" onclick="sendMsg()">Send</button>
+</div>
+
+</section>
+
+<footer>
+Made for practice • 2026
+</footer>
+
+<script>
+
+function toggleFaq(el){
+let ans=el.querySelector(".faqAns");
+ans.style.display = ans.style.display==="block"?"none":"block";
+}
+
+function sendMsg(){
+alert("Message sent");
+}
+
+</script>
+
+</body>
+</html>
